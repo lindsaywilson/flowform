@@ -47,7 +47,16 @@
 	  <?php print render($tabs); ?>
       
       <?php if ($title): ?>
-        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+      	<?php
+			switch($node->type){
+				case 'product':
+					$title = 'Products';
+				break;
+			}
+		?>
+        <h1 class="page__title title" id="page-title">
+		<?php print $title; ?>
+        </h1>
       <?php endif; ?>
       
       <?php print $messages; ?>
@@ -55,7 +64,6 @@
       
       <div class="inner">
 	  	<?php print render($page['content']); ?>
-        
       </div>
     </div>
   

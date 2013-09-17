@@ -38,16 +38,37 @@
   
   <div class="right">
     <?php
-    if(isset($content['field_page_heading'])){
+	if($node->type == 'product'){ 
+		print '<h2>FlowForm '.$title.'<span>Item #'.$node->field_page_heading['und'][0]['value'].'</span></h2>'; 
+	}
+    if(isset($content['field_page_heading']) && $node->type != 'product'){
 		print render($content['field_page_heading']);
 	}
+	if($node->type == 'product'){ 
+		print '<h4>Features</h4>'; 
+	}
 	print render($content['body']);
+	if($node->type == 'product'){ 
+		print '<h4>Options</h4>'; 
+		print render($content['field_text']);
+	}
+	
+	if($node->type == 'product'):
 	?>
+    <div class="footnote">
+    	<p>Every project is unique and required special considerations. <a href="/contact">Contact us</a> today to determine what the best solutions are for your park!</p>
+    </div>
+    <?php endif; ?>
   </div>
   
   <div class="left">
 	<?php
-	if(isset($content['field_page_heading'])){
+	if(isset($content['field_images'])){
+		print '<div class="images">';
+		print render($content['field_images']);
+		print '</div>';
+	}
+	if(isset($content['field_image'])){
 		print '<div class="image">';
 		print render($content['field_image']);
 		print '</div>';

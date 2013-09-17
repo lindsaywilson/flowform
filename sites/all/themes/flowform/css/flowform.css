@@ -4,12 +4,12 @@
 /* MAIN LAYOUT 
 /* ------------------------------ */
 
-body{ font-family:Arial, Helvetica, sans-serif; font-size:62.5%; background:#000; color:#fff; -webkit-font-smoothing: antialiased;}
+body{ font-family:Arial, Helvetica, sans-serif; font-size:62.5%; background:#000; color:#fff; -webkit-font-smoothing: antialiased; }
 #page{ border-top:30px solid #a6cf39; background:url(../images/tile_page.gif) repeat-x}
 #page > .inner{ background:url(../images/tile_header.gif) right 0 no-repeat}
 .wrap{ max-width:1000px; margin:0 auto; position:relative}
 #content{ position:relative; padding-bottom:50px}
-.padding > .inner,
+#page-bottom{ padding-top:60px; background:#333333}
 .padding > .inner{ padding:0 20px}
 
 /* ------------------------------ */
@@ -73,24 +73,31 @@ ul#social-links li.social.youtube a:hover{ background-position:-200px -50px}
 
 
 /* ------------------------------ */
-/* HTML ELEMENTS
+/* ELEMENTS
 /* ------------------------------ */
 
 h1, h2, h3, h4, h5{ line-height:1; font-family:'archivo'; color:#a6ce39; text-transform:uppercase; }
 h1{ font-size:7.2em; padding:20px; margin:20px 0 40px; border-top:2px solid #404040; border-bottom:2px solid #404040}
-h2{ font-size:2.5em; padding:0 0 25px; margin:0 0 20px; border-bottom:2px solid #404040}
-h3{ font-size:2.1em;}
-h4{ font-size:1.5em; font-family:arial}
-h5{ font-size:1.2; font-family:arial; color:#929191}
+h2{ font-size:2.5em; padding:0 0 15px; margin:0 0 20px; border-bottom:2px solid #404040}
+h3{ font-size:2.1em; margin:0 0 10px 0}
+h4{ font-size:1.5em; margin:0 0 10px 0; font-family:arial; }
+h5{ font-size:1.2em; margin:0 0 15px 0;font-family:arial; color:#929191; }
 
-p, ul, ol{ line-height:1.5m; font-size:1.5em; margin: 0 0 20px; padding:0;} 
-p:last-child, ul:last-child, ol:last-child{ margin-bottom:0}
-ul, ol{ margin-left:40px; padding:0; }
+h2 a, h3 a, h4 a, h5 a{ color:#a6ce39; text-decoration:none}
+h2.block-title{ color:#fff; border:none; margin:0 0 30px; padding:0}
+h2 span{ font-size:.48em; margin:0; font-family:arial; color:#929191; display:block; margin-top:5px}
+
+p, ul, ol{ line-height:1.5m; font-size:1.5em; margin: 0 0 20px; padding:0; line-height:1.4em} 
+ul{ margin-left:15px; padding:0; }
+ol{ margin-left:20px; padding:0; }
 ul li, ol li{ padding-bottom:5px}
 ul ul,
 ul ul ul,
 ol ol,
 ol ol ol{ font-size:1em; }
+ul ul{ margin-left:25px}
+ol ol{ margin-left:30px}
+ol ol{ list-style-type:lower-alpha}
 ul.nostyle, ul.nostyle li{ margin:0; padding:0; list-style:none}
 
 a{ color:#fff;}
@@ -100,6 +107,10 @@ input, textarea, select{ }
 select{ }
 input[type=submit]{ }
 label{ }
+
+table{ width:100%}
+
+.image img{ display:block}
 
 .green{ color:#a6ce39;}
 
@@ -124,11 +135,22 @@ div.messages{ font-size:1.5em}
 
 #skip-link { margin: 0;}
 
-ul.primary, ul.secondary{ border:none; margin:0; padding:0; font-size:.9em; text-transform:uppercase; position:absolute; top:2px; right:0}
+ul.primary, ul.secondary{ border:none; margin:0; padding:0; font-size:.9em; position:absolute; top:2px; right:0; }
 ul.primary li{ border:none; border-radius:0; margin-top:2px; padding:0}
-ul.primary a:link, ul.primary a:visited{ padding:3px 10px; text-shadow:none; border-radius:0; text-decoration:none; background:#a6ce39; color:#fff; border:none;}
-ul.primary a:hover{ background:#82a621; }
+ul.primary a:link, ul.primary a:visited,
+.views-field-edit-node a,
+#edit-actions input[type=submit]{ padding:3px 10px; text-shadow:none; border-radius:0; text-decoration:none; background:#a6ce39; color:#fff; border:none; font-weight:bold; display:block; text-transform:uppercase; z-index:99}
+ul.primary a:hover,
+.views-field-edit-node a:hover,
+#edit-actions input[type=submit]:hover{ background:#82a621; }
 .is-active.tabs-primary__tab{ border-radius:0; border:none}
+
+/* FLEXSLIDER */
+.flexslider{ background:none; border:none; border-radius:0; box-shadow:none; margin:0; padding:0}
+.flexslider ul.slides,
+.flexslider ul.slides li,
+.flexslider ul.flex-direction-nav,
+.flexslider ul.flex-direction-nav li{ margin:0; padding:0}
 
 
 /* ------------------------------ */
@@ -137,6 +159,7 @@ ul.primary a:hover{ background:#82a621; }
 
 .node .right{ float:right; width:57%}
 .node .left{ float:left; width:37%}
+.node .images{ border-bottom:2px solid #333; margin-bottom:6px; padding-bottom:6px}
 
 .front .node .right,
 .page-node-7 .node-7 .right{ float:none; width:auto}
@@ -145,9 +168,36 @@ ul.primary a:hover{ background:#82a621; }
 .front h1{ display:none}
 .front .right p{ font-size:2em}
 
+/* PRODUCT */
+.node-product .field-name-field-image{ background:#5c5c5c; text-align:center}
+.node-product .field-name-field-image img{ margin:0 auto}
+.footnote{ border-top:2px solid #666; padding-top:20px; }
+.footnote p{ margin-bottom:0}
+
 
 /* ------------------------------ */
 /* VIEWS
 /* ------------------------------ */
+
+/* GLOBAL VIEW STYLES */
+.view .views-row{ position:relative}
+.view .views-field-edit-node a{ position:absolute; right:0; top:0;}
+table.draggable { color:#000; font-size:1.5em}
+.tabledrag-toggle-weight-wrapper{ display:none}
+
+/* PROFILES */
+.view-profiles .views-row{ margin-bottom:60px}
+.view-profiles .header{ position:relative; border-bottom:2px solid #666; padding-bottom:15px; margin-bottom:15px }
+.view-profiles .title{ position:absolute; bottom:15px; left:43%; padding-right:10px}
+.view-profiles .image{ width:40%}
+.view-profiles p{ font-size:1.3em; line-height:1.4em}
+.view-profiles h5{ margin:0}
+
+/* PRODUCTS */
+.view-products .views-row{ margin-bottom:50px; }
+.view-products h3{ border-top:2px solid #666; padding-top:15px}
+.view-products h3 a{ background:url(../images/arrow_white.png) right center no-repeat; padding-right:25px}
+.view-products h3 a:hover{ padding-right:26px}
+
 
 
