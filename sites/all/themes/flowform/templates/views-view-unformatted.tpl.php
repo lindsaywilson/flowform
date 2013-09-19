@@ -19,6 +19,7 @@
 		$classes_array[$id] .= ' grid half';
 		break;
 	case 'products':
+	case 'projects':
 		$classes_array[$id] .= ' grid third';
 		break;
   }

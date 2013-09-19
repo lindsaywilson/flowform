@@ -52,6 +52,9 @@
 				case 'product':
 					$title = 'Products';
 				break;
+				case 'project':
+					$title = 'Projects';
+				break;
 			}
 		?>
         <h1 class="page__title title" id="page-title">

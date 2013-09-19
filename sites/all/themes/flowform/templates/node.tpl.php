@@ -36,6 +36,20 @@
     hide($content['links']);
   ?>
   
+  <?php if($node->type == 'project'): ?>
+  	<div id="page-header">
+    	<?php
+		print '<h2>'.$title.'<span>'.$node->field_location['und'][0]['value'].'</span></h2>'; 
+		?>
+    </div>
+    <?php 
+	if(isset($content['field_images'])){
+		print '<div class="images">';
+		print render($content['field_images']);
+		print '</div>';
+	} ?>
+  <?php endif; ?>
+  
   <div class="right">
     <?php
 	if($node->type == 'product'){ 
@@ -47,7 +61,16 @@
 	if($node->type == 'product'){ 
 		print '<h4>Features</h4>'; 
 	}
-	print render($content['body']);
+	
+	if($node->type != 'webform'){
+		print render($content['body']);
+	}
+	
+	if($node->type == 'webform'){
+		print render($content);
+	}
+	
+	print render($content['field_video']);
 	if($node->type == 'product'){ 
 		print '<h4>Options</h4>'; 
 		print render($content['field_text']);
@@ -63,7 +86,11 @@
   
   <div class="left">
 	<?php
-	if(isset($content['field_images'])){
+	if($node->type == 'webform'){
+		print render($content['body']);
+	}
+	
+	if(isset($content['field_images']) && $node->type == 'product'){
 		print '<div class="images">';
 		print render($content['field_images']);
 		print '</div>';
@@ -72,6 +99,19 @@
 		print '<div class="image">';
 		print render($content['field_image']);
 		print '</div>';
+	}
+	if($node->type == 'project'){
+		print '<div class="field field-name-field-title field-label-above">
+		<div class="field-label"><h4>Project Name</h4></div>
+		<div class="field-item">
+		'.$title.'
+		</div></div>';
+	}
+	if(isset($content['field_images']) && $node->type == 'project'){
+		print render($content['field_client']);
+		print render($content['field_gc']);
+		print render($content['field_budget']);
+		print render($content['field_text']);
 	}
 	?>
   </div>

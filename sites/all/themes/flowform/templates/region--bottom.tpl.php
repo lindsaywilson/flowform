@@ -10,7 +10,7 @@
 <?php if ($content): ?>
   <div id="page-bottom">
   	<div class="wrap padding">
-		<div class="inner <?php print $classes; ?>">
+		<div class="inner <?php print $classes; ?> clearfix">
 			<?php print $content; ?>
 		</div>
     </div>

@@ -33,7 +33,8 @@
 		$classes .= ' layout-half clearfix';
 		break;
 	case 'products':
-		$classes .= ' layout-third clearfix';
+	case 'projects':
+		$classes .= ' layout-third view-list clearfix';
 		break;
   }
 ?>

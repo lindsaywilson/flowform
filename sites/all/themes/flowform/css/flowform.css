@@ -8,6 +8,7 @@ body{ font-family:Arial, Helvetica, sans-serif; font-size:62.5%; background:#000
 #page{ border-top:30px solid #a6cf39; background:url(../images/tile_page.gif) repeat-x}
 #page > .inner{ background:url(../images/tile_header.gif) right 0 no-repeat}
 .wrap{ max-width:1000px; margin:0 auto; position:relative}
+#main{ padding-top:20px}
 #content{ position:relative; padding-bottom:50px}
 #page-bottom{ padding-top:60px; background:#333333}
 .padding > .inner{ padding:0 20px}
@@ -77,10 +78,10 @@ ul#social-links li.social.youtube a:hover{ background-position:-200px -50px}
 /* ------------------------------ */
 
 h1, h2, h3, h4, h5{ line-height:1; font-family:'archivo'; color:#a6ce39; text-transform:uppercase; }
-h1{ font-size:7.2em; padding:20px; margin:20px 0 40px; border-top:2px solid #404040; border-bottom:2px solid #404040}
+h1{ font-size:7.2em; padding:20px; margin:0 0 40px; border-top:2px solid #404040; border-bottom:2px solid #404040}
 h2{ font-size:2.5em; padding:0 0 15px; margin:0 0 20px; border-bottom:2px solid #404040}
 h3{ font-size:2.1em; margin:0 0 10px 0}
-h4{ font-size:1.5em; margin:0 0 10px 0; font-family:arial; }
+h4{ font-size:1.5em; margin:15px 0 5px 0; font-family:arial; }
 h5{ font-size:1.2em; margin:0 0 15px 0;font-family:arial; color:#929191; }
 
 h2 a, h3 a, h4 a, h5 a{ color:#a6ce39; text-decoration:none}
@@ -102,17 +103,35 @@ ul.nostyle, ul.nostyle li{ margin:0; padding:0; list-style:none}
 
 a{ color:#fff;}
 a:hover{ text-decoration:none}
+a.arrow{ font-size:1.5em; text-transform:uppercase; text-decoration:none; padding-right:15px; background:url(../images/arrow_green.png) right center no-repeat}
+a.arrow:hover{ padding-right:16px}
+p a.arrow{ font-size:1em}
 
-input, textarea, select{ }
-select{ }
-input[type=submit]{ }
-label{ }
+img{ display:block}
 
 table{ width:100%}
 
-.image img{ display:block}
-
 .green{ color:#a6ce39;}
+.large{ font-size:2.1em}
+p .large{ font-size:1.4em}
+
+.webform-client-form{ padding-bottom:40px}
+.webform-client-form .form-item{ margin:0 0 15px}
+.webform-client-form .webform-component-textarea{ margin-bottom:40px}
+.webform-client-form label{ font-size:1.5em; font-weight:normal; }
+.webform-client-form .webform-container-inline label,
+.webform-client-form .webform-component-textarea label{ width:20%; display:inline-block; margin:0}
+.webform-client-form .webform-component-radios label{ width:auto}
+.webform-client-form .form-radios{ float:right; text-transform:uppercase}
+.webform-client-form .form-radios .form-type-radio{ margin-left:25px}
+.webform-client-form input[type=text],
+.webform-client-form input[type=email],
+.webform-client-form select,
+.webform-client-form textarea{ font-size:1.5em; width:79%}
+.webform-client-form textarea{ display:inline; width:79%}
+.webform-client-form .form-textarea-wrapper{ display:inline; }
+.webform-client-form #edit-actions{ margin-top:30px}
+.webform-client-form #edit-actions input[type=submit]{ font-size:1.2em; border-radius:5px; float:right; height:30px}
 
 /* TRANSITIONS */
 .transition, .btn a, a.btn, input[type=submit], #nav a, .menu a {
@@ -126,6 +145,8 @@ table{ width:100%}
 /* DRUPAL OVERRIDES */
 #admin-menu .dropdown li{ font-size:9px}
 div.messages{ font-size:1.5em}
+div.messages p,
+div.messages ul{ font-size:1em; margin:0}
 .contextual-links-region{ position:static}
 
 
@@ -150,14 +171,48 @@ ul.primary a:hover,
 .flexslider ul.slides,
 .flexslider ul.slides li,
 .flexslider ul.flex-direction-nav,
-.flexslider ul.flex-direction-nav li{ margin:0; padding:0}
+.flexslider ul.flex-direction-nav li{ margin:0; padding:0; font-size:1em}
+/* Direction Nav */
+.flexslider .flex-direction-nav a{ display:block; width:37px; height:72px; margin-top:-36px  }
+.flexslider .flex-direction-nav .flex-prev,
+.flexslider:hover .flex-prev{ left:0; opacity:1; }
+.flexslider .flex-direction-nav .flex-next,
+.flexslider:hover .flex-next{ right:0; opacity:1; }
+.flexslider .flex-direction-nav a{ background:url(../images/sprite.png) }
+.flexslider .flex-direction-nav a.flex-prev{ background-position:-290px 0}
+.flexslider .flex-direction-nav a.flex-next{ background-position:-249px 0}
+.flexslider .flex-direction-nav a.flex-prev:hover{ background-position:-290px -80px}
+.flexslider .flex-direction-nav a.flex-next:hover{ background-position:-249px -80px}
+/* Pager Nav */
+.flexslider .flex-control-nav{ bottom:0; height:26px; }
+.flexslider .flex-control-nav li{ padding:0 5px; margin:0; background:#000; height:26px; line-height:26px; position:relative}
+.flexslider .flex-control-paging li a{ background:#333; width:10px; height:10px; margin-top:8px; box-shadow:none}
+.flexslider .flex-control-paging li a.flex-active,
+.flexslider .flex-control-paging li a:hover{ background:#fff}
+.flexslider .flex-control-paging li:first-child:before,
+.flexslider .flex-control-paging li:last-child:after{ content:''; height:26px; width:25px; display:block; position:absolute;  background:url(/sites/all/themes/flowform/images/sprite.png); top:0}
+.flexslider .flex-control-paging li:first-child:before{ left:-25px; background-position:0 -100px}
+.flexslider .flex-control-paging li:last-child:after{ right:-25px;background-position:-30px -100px}
+/* Small Slider */
+.left .flexslider .flex-direction-nav a{ width:26px; height:52px; margin-top:-26px}
+.left .flexslider .flex-direction-nav a.flex-prev{ background-position:-360px 0}
+.left .flexslider .flex-direction-nav a.flex-next{ background-position:-330px 0}
+.left .flexslider .flex-direction-nav a.flex-prev:hover{ background-position:-360px -60px}
+.left .flexslider .flex-direction-nav a.flex-next:hover{ background-position:-330px -60px}
+.left .flexslider .flex-control-nav{ height:19px}
+.left .flexslider .flex-control-nav li{ height:19px; line-height:19px}
+.left .flex-control-paging li:first-child:before, 
+.left .flex-control-paging li:last-child:after{ width:18px; height:19px}
+.left .flex-control-paging li:first-child:before{ left:-18px; background-position:0 -130px}
+.left .flex-control-paging li:last-child:after{ right:-18px; background-position:-20px -130px}
+.left .flexslider .flex-control-paging li a{ margin-top:6px}
 
 
 /* ------------------------------ */
 /* CONTENT TYPES
 /* ------------------------------ */
 
-.node .right{ float:right; width:57%}
+.node .right{ float:right; width:58%}
 .node .left{ float:left; width:37%}
 .node .images{ border-bottom:2px solid #333; margin-bottom:6px; padding-bottom:6px}
 
@@ -165,14 +220,28 @@ ul.primary a:hover,
 .page-node-7 .node-7 .right{ float:none; width:auto}
 
 /* HOME */
+.front ul.primary{ top:-20px}
 .front h1{ display:none}
-.front .right p{ font-size:2em}
+.front .right p{ font-size:2em; margin:0}
 
 /* PRODUCT */
 .node-product .field-name-field-image{ background:#5c5c5c; text-align:center}
 .node-product .field-name-field-image img{ margin:0 auto}
 .footnote{ border-top:2px solid #666; padding-top:20px; }
 .footnote p{ margin-bottom:0}
+
+/* PROJECT */
+.node-project h2{ border:none; margin:-20px 0 20px; padding:0}
+.node-project .images{ margin:0 -20px 55px}
+.field-name-field-title h4{ margin-top:0}
+.field-name-field-title .field-item,
+.field-name-field-client .field-item,
+.field-name-field-gc .field-item{ font-size:1.5em}
+
+/* WEBFORM */
+.node-webform .right .field-name-body{ display:none}
+.node-webform .left a{ font-weight:bold; color:#A6CE39; text-decoration:none}
+.node-webform .left a:hover{ text-decoration:underline}
 
 
 /* ------------------------------ */
@@ -193,11 +262,25 @@ table.draggable { color:#000; font-size:1.5em}
 .view-profiles p{ font-size:1.3em; line-height:1.4em}
 .view-profiles h5{ margin:0}
 
-/* PRODUCTS */
-.view-products .views-row{ margin-bottom:50px; }
-.view-products h3{ border-top:2px solid #666; padding-top:15px}
-.view-products h3 a{ background:url(../images/arrow_white.png) right center no-repeat; padding-right:25px}
-.view-products h3 a:hover{ padding-right:26px}
+/* LIST */
+.view-list .views-row{ margin-bottom:50px; }
+.view-list h3{ border-top:2px solid #666; padding-top:15px; margin-bottom:5px}
+.view-list h3 a{ background:url(../images/arrow_white.png) right center no-repeat; padding-right:25px}
+.view-list h3 a:hover{ padding-right:26px}
+
+/* HOME SLIDESHOW */
+.view-home-slideshow{ border-bottom:2px solid #404040; margin-bottom:40px; padding-bottom:6px}
+.view-home-slideshow .flexslider .slides{ position:relative}
+.view-home-slideshow .flexslider .text{ position:absolute; top:20%; left:0; width:320px; background: #fff; background:rgba(255,255,255,0.9); border-radius:0 15px 15px 0; color:#333333}
+.view-home-slideshow .flexslider .text .inner{ padding:40px 35px 45px 60px}
+.view-home-slideshow .flexslider .text h2{ border-bottom:2px solid #afafac; margin:0 0 12px; padding:0 0 15px}
+.view-home-slideshow .flexslider .text .body{ border-bottom:2px solid #afafac; margin:0 0 15px; padding:0 0 12px}
+.view-home-slideshow .flexslider .text p{ margin:0}
+.view-home-slideshow .flexslider .text a.arrow{ color:#A6CE39; }
+
+/* INSTAGRAM */
+.view-instagrams{ float:right; width:50%}
+.view-instagrams .views-row{ float:left; margin:0 11px; width:25%}
 
 
 
