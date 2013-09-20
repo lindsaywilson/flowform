@@ -22,6 +22,9 @@
 	case 'projects':
 		$classes_array[$id] .= ' grid third';
 		break;
+	case 'instagrams':
+		$classes_array[$id] .= ' grid quarter';
+		break;
   }
   $classes_array[$id] .= ' clearfix';
   ?>

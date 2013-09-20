@@ -66,6 +66,7 @@ stylesheets[all][] = css/styles.css
 
 ; Optionally add some JavaScripts to your theme.
 
+scripts[] = js/mobile-scroll.js
 scripts[] = js/script.js
 
 

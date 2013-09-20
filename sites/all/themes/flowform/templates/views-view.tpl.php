@@ -36,6 +36,9 @@
 	case 'projects':
 		$classes .= ' layout-third view-list clearfix';
 		break;
+	case 'instgrams':
+		$classes .= ' layout-quarter clearfix';
+		break;
   }
 ?>
 

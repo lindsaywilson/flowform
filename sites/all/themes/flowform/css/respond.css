@@ -3,6 +3,12 @@
 /* DESKTOP
 /* ------------------------------ */
 
+@media (max-width: 960px) {
+
+nav ul{ font-size:1.65em}
+nav ul li a{ padding:0 10px}
+
+}
 
 /* ------------------------------ */
 /* TABLET
@@ -10,6 +16,94 @@
 
 @media (max-width: 800px) {
 
+/* MAIN LAYOUT 
+------------------------------ */
+
+#page{ position:relative} /* DO NOT REMOVE: JS MEDIA QUERY */
+.padding > .inner{ padding:0 50px}
+
+
+/* HEADER 
+------------------------------ */
+
+header .inner{ background:#fff; position:relative;}
+#menu-toggle{  display:block }
+nav{ position:relative; top:0}
+nav ul li{ display:block; float:none; text-align:center; line-height:44px;}
+
+
+/* FOOTER
+ ------------------------------ */
+
+#buckets .grid.third{ float:none;width:auto; }
+#buckets .grid.third:nth-child(3n-2) .inner,
+#buckets .grid.third:nth-child(3n-1) .inner,
+#buckets .grid.third:nth-child(3n+0) .inner{ padding:0;}
+#buckets ul{ max-width:294px; margin:0 auto}
+#buckets ul li{ margin-bottom:20px}
+#buckets ul li:last-child{ margin:0}
+
+
+/* GRID
+------------------------------ */
+
+.grid.half{ width:auto; float:none}
+.grid.half:nth-child(odd) .inner,
+.grid.half:nth-child(even) .inner{padding:0}
+
+.grid.third,
+.grid.quarter{ width:50%}
+.grid.third:nth-child(3n-2) .inner,
+.grid.third:nth-child(3n-1) .inner,
+.grid.third:nth-child(3n+0) .inner,
+.grid.quarter:nth-child(4n-3) .inner,
+.grid.quarter:nth-child(4n-2) .inner,
+.grid.quarter:nth-child(4n-1) .inner,
+.grid.quarter:nth-child(4n) .inner{ padding:0}
+.grid.third:nth-child(odd) .inner,
+.grid.quarter:nth-child(odd) .inner{ padding-right:20px}
+.grid.third:nth-child(even) .inner,
+.grid.quarter:nth-child(even) .inner{padding-left:20px}
+
+
+/* ELEMENTS
+------------------------------ */
+
+h1{ font-size:4em; padding-left:50px; padding-right:50px }
+h2{ font-size:2em;  }
+h3{ font-size:1.8em; }
+h4{ font-size:1.5em; }
+h5{ font-size:1.2em; }
+
+
+/* CONTENT TYPES
+------------------------------ */
+
+.node .left,
+.node .right{ float:none; width:auto}
+.node .left{ margin-top:50px}
+
+.node .left .images,
+.node .left .image{ max-width:350px; margin:0 auto}
+
+/* PROJECT */
+.view-home-slideshow,
+.node-project .images{ margin-left:-50px; margin-right:-50px}
+
+
+/* VIEWS
+------------------------------ */
+
+/* HOME SLIDESHOW */
+.view-home-slideshow .flexslider .text{ position:relative; top:0; left:0; border-radius:0; width:auto}
+.view-home-slideshow .flexslider .text .inner{ padding: 40px}
+
+/* FEEDS */
+.facebook-feed,
+#block-views-instagrams-block{ float:none; width:auto}
+.facebook-feed .inner,
+#block-views-instagrams-block > .inner{ padding:0}
+#block-views-instagrams-block{ margin-top:40px}
 
 
 }
@@ -22,6 +116,63 @@
 @media (max-width: 480px) {
 
 
+/* MAIN LAYOUT 
+------------------------------ */
+.padding > .inner{ padding:0 20px}
+header .inner{ padding-right:60px}
+
+
+/* GRID
+------------------------------ */
+
+.grid{ float:none}
+.grid.third,
+.grid.quarter{ width:auto;}
+.grid.third:nth-child(even) .inner,
+.grid.third:nth-child(odd) .inner,
+.grid.quarter:nth-child(even) .inner,
+.grid.quarter:nth-child(odd) .inner{padding:0}
+
+
+/* ELEMENTS
+------------------------------ */
+
+h1{ font-size:3em; padding-left:20px; padding-right:20px }
+h2{ font-size:1.8em;  }
+h3{ font-size:1.6em; }
+
+.webform-client-form .webform-container-inline label, 
+.webform-client-form .webform-component-textarea label{ display:block; width:auto}
+.webform-client-form .form-radios{ float:none; display:block}
+.webform-client-form .webform-component-radios label{ display:inline-block}
+.webform-client-form #edit-actions input[type="submit"]{ float:none; display:inline}
+.webform-client-form input[type="text"], 
+.webform-client-form input[type="email"], 
+.webform-client-form select, 
+.webform-client-form textarea{ width:100%}
+.webform-client-form .form-radios .form-type-radio{ margin:0 25px 0 0}
+
+
+/* CONTENT TYPES
+------------------------------ */
+
+/* PROJECT */
+.view-home-slideshow,
+.node-project .images{ margin-left:-20px; margin-right:-20px}
+
+
+/* VIEWS
+------------------------------ */
+
+/* PROFILES */
+.view-profiles .views-row{ margin-bottom:20px}
+.view-profiles .views-row .image,
+.view-profiles .views-row .title{ width:auto; position:relative; top:0; left:0; }
+.view-profiles .views-row .image{ margin-bottom:20px}
+.view-profiles .views-row .image img{ margin:0 auto}
+
+/* HOME SLIDESHOW */
+.view-home-slideshow .flexslider .text .inner{ padding: 40px 50px}
 
 }  
 

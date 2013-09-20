@@ -17,8 +17,9 @@
             <?php if ($logo): ?>
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
             <?php endif; ?>
-        
-            <?php if ($main_menu): ?>
+            <div id="menu-toggle"><a class="open" href="#">Menu</a></div>
+       	  </div>
+          
                 <nav id="main-menu" role="navigation" tabindex="-1">
                   <?php
                   // This code snippet is hard to modify. We recommend turning off the
@@ -32,9 +33,8 @@
                     ),
                   )); ?>
                 </nav>
-            <?php endif; ?>
           
-          </div>
+          
       </div>
   </header>
 
@@ -48,6 +48,7 @@
       
       <?php if ($title): ?>
       	<?php
+		if(isset($node)){
 			switch($node->type){
 				case 'product':
 					$title = 'Products';
@@ -56,6 +57,7 @@
 					$title = 'Projects';
 				break;
 			}
+		}
 		?>
         <h1 class="page__title title" id="page-title">
 		<?php print $title; ?>
