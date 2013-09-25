@@ -38,9 +38,10 @@ nav ul li a.active-trail{ font-family:'archivo'; color:#a6ce39}
 /* ------------------------------ */
 
 #social{ background:#5c5c5c; padding:15px 0; text-align:center}
+#social .container { float:left; width:100%; overflow:hidden;}
 ul#social-links, ul#social-links li{ margin:0; padding:0; list-style:none}
-ul#social-links{ font-size:1.4em}
-ul#social-links li{ display:inline; padding:0 35px; border-right:2px solid #747474; }
+ul#social-links{ font-size:1.4em; float:left; position:relative; left:50%;}
+ul#social-links li{ display:block; float:left; position:relative; right:50%; padding:0 35px; border-right:2px solid #747474; }
 ul#social-links li div{ display:inline-block; height:42px;}
 ul#social-links li .phone{ font-size:1.5em}
 ul#social-links li a{ color:#a6ce39; text-decoration:none}
@@ -116,6 +117,9 @@ a:hover{ text-decoration:none}
 a.arrow{ font-size:1.5em; text-transform:uppercase; text-decoration:none; padding-right:15px; background:url(../images/arrow_green.png) right center no-repeat}
 a.arrow:hover{ padding-right:16px}
 p a.arrow{ font-size:1em}
+.arrow.white{ color:#a6ce39; font-family:'archivo';}
+.arrow.white.small{background:url(../images/arrow_white_small.png) right center no-repeat; padding-right:18px}
+.arrow.white.small:hover{ padding-right:19px}
 
 img{ display:block}
 
@@ -132,18 +136,22 @@ label, input, textarea, select{ font-size:1.5em}
 .webform-client-form .webform-component-textarea{ margin-bottom:40px}
 .webform-client-form label{ font-size:1.5em; font-weight:normal; }
 .webform-client-form .webform-container-inline label,
-.webform-client-form .webform-component-textarea label{ width:20%; display:inline-block; margin:0}
+.webform-client-form .webform-component-textarea label{ width:25%; display:inline-block; margin:0}
 .webform-client-form .webform-component-radios label{ width:auto}
 .webform-client-form .form-radios{ float:right; text-transform:uppercase}
 .webform-client-form .form-radios .form-type-radio{ margin-left:25px}
+.webform-client-form .webform-component-checkboxes{ padding-left:26%; margin-top:40px}
+.webform-client-form .form-type-checkbox label{ margin-left:10px}
 .webform-client-form input[type=text],
 .webform-client-form input[type=email],
 .webform-client-form select,
-.webform-client-form textarea{ font-size:1.5em; width:79%}
-.webform-client-form textarea{ display:inline; width:79%}
+.webform-client-form textarea{ font-size:1.5em; width:74%}
+.webform-client-form textarea{ display:inline; width:74%}
 .webform-client-form .form-textarea-wrapper{ display:inline; }
 .webform-client-form #edit-actions{ margin-top:30px}
 .webform-client-form #edit-actions input[type=submit]{ font-size:1.2em; border-radius:5px; float:right; height:30px}
+
+#webform-component-terms{ height:140px; overflow:auto; font-size:.7em; padding-left:26%}
 
 /* TRANSITIONS */
 .transition, .btn a, a.btn, input[type=submit], #nav a, .menu a {
@@ -179,13 +187,14 @@ ul.primary a:hover,
 .is-active.tabs-primary__tab{ border-radius:0; border:none}
 
 /* VIDEO */
-
+.field-name-field-video{ margin-top:40px}
 .fluid-width-video-wrapper { padding:0; position: relative; width: 100%; padding-bottom:56.25%}
 .fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed,
 html .media-vimeo-preview-wrapper object, html .media-vimeo-preview-wrapper iframe{ height: 100%; width: 100%; position: absolute; top: 0; left: 0;  }
+.media-vimeo-preview-wrapper, .fluid-width-video-wrapper{ height:auto !important; width:auto !important}
 
 /* FLEXSLIDER */
-.flexslider{ background:none; border:none; border-radius:0; box-shadow:none; margin:0; padding:0}
+.flexslider{ background:none; border:none; border-radius:0; box-shadow:none; margin:0; padding:0; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; box-shadow:none; -webkit-box-shadow:none; -moz-box-shadow:none; -o-box-shadow:none;}
 .flexslider ul.slides,
 .flexslider ul.slides li,
 .flexslider ul.flex-direction-nav,
@@ -196,7 +205,7 @@ html .media-vimeo-preview-wrapper object, html .media-vimeo-preview-wrapper ifra
 .flexslider:hover .flex-prev{ left:0; opacity:1; }
 .flexslider .flex-direction-nav .flex-next,
 .flexslider:hover .flex-next{ right:0; opacity:1; }
-.flexslider .flex-direction-nav a{ background:url(../images/sprite.png) }
+.flexslider .flex-direction-nav a{ background:url(../images/sprite.png); -webkit-transition:none; }
 .flexslider .flex-direction-nav a.flex-prev{ background-position:-290px 0}
 .flexslider .flex-direction-nav a.flex-next{ background-position:-249px 0}
 .flexslider .flex-direction-nav a.flex-prev:hover{ background-position:-290px -80px}
@@ -249,6 +258,7 @@ html .media-vimeo-preview-wrapper object, html .media-vimeo-preview-wrapper ifra
 .node-product .field-name-field-image img{ margin:0 auto}
 .footnote{ border-top:2px solid #666; padding-top:20px; }
 .footnote p{ margin-bottom:0}
+#request-dwg{ border-bottom:2px solid #404040; line-height:1; padding:8px 0}
 
 /* PROJECT */
 .node-project h2{ border:none; margin:-20px 0 20px; padding:0}
@@ -256,12 +266,20 @@ html .media-vimeo-preview-wrapper object, html .media-vimeo-preview-wrapper ifra
 .field-name-field-title h4{ margin-top:0}
 .field-name-field-title .field-item,
 .field-name-field-client .field-item,
-.field-name-field-gc .field-item{ font-size:1.5em}
+.field-name-field-gc .field-item,
+.field-name-field--budget .field-item{ font-size:1.5em}
 
 /* WEBFORM */
 .node-webform .right .field-name-body{ display:none}
 .node-webform .left a{ font-weight:bold; color:#A6CE39; text-decoration:none}
 .node-webform .left a:hover{ text-decoration:underline}
+
+/* DWG FORM */
+.node-27{ position:relative}
+.webform-client-form #webform-component-products{ position:absolute; left:0; top:0; padding:0; margin:0; width:30%}
+.webform-client-form #webform-component-products > label{ font-weight:bold; color:#a6ce39; text-transform:uppercase; width:auto; margin-bottom:20px; line-height:1.2}
+.webform-client-form #webform-component-products  .form-type-checkbox label{ margin-left:20px; text-transform:uppercase; line-height:1}
+.webform-client-form #webform-component-products  .form-type-checkbox label span {color:#929191; font-size:.8em; display:block; margin-left:38px; font-weight:bold}
 
 
 /* ------------------------------ */

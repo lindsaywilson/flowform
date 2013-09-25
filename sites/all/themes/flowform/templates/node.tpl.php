@@ -100,6 +100,9 @@
 		print render($content['field_image']);
 		print '</div>';
 	}
+	if($node->type == 'product'){
+		print '<div id="request-dwg"><a href="/dwg-request" class="arrow white small">Request DWG</a></div>';
+	}
 	if($node->type == 'project'){
 		print '<div class="field field-name-field-title field-label-above">
 		<div class="field-label"><h4>Project Name</h4></div>
@@ -107,10 +110,10 @@
 		'.$title.'
 		</div></div>';
 	}
-	if(isset($content['field_images']) && $node->type == 'project'){
+	if($node->type == 'project'){
 		print render($content['field_client']);
 		print render($content['field_gc']);
-		print render($content['field_budget']);
+		print render($content['field__budget']);
 		print render($content['field_text']);
 	}
 	?>

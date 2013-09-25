@@ -28,7 +28,7 @@ nav ul li a{ padding:0 10px}
 
 header .inner{ background:#fff; position:relative;}
 #menu-toggle{  display:block }
-nav{ position:relative; top:0}
+nav{ position:relative; top:0; display:none}
 nav ul li{ display:block; float:none; text-align:center; line-height:44px;}
 
 
@@ -151,6 +151,8 @@ h3{ font-size:1.6em; }
 .webform-client-form select, 
 .webform-client-form textarea{ width:100%}
 .webform-client-form .form-radios .form-type-radio{ margin:0 25px 0 0}
+.webform-client-form .webform-component-checkboxes,
+#webform-component-terms{ padding-left:0}
 
 
 /* CONTENT TYPES

@@ -21,8 +21,18 @@ Drupal.behaviors.my_custom_behavior = {
 	$('.field-name-field-video div, .field-name-field-video iframe, .field-name-field-video object, .field-name-field-videoembed').attr('width','').attr('height','').attr('style','');
 	$('.field-name-field-video iframe, .field-name-field-video object, .field-name-field-video embed').wrap('<div class="fluid-width-video-wrapper" />');
 	
+	// DWG Request Form
+	if($('body').hasClass('page-node-27')){
+		
+		$('#webform-component-products .form-item label').each( function(){
+			str = $(this).html().split('Item');
+			$(this).html(str[0]+'<span>Item '+str[1]+'</span>');
+			console.log();
+		});
+		
+	}
 	
-	
+
 	// Check Mobile
 	timerResize = function(){
         // Define if mobile
