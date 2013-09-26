@@ -43,6 +43,10 @@ nav ul li{ display:block; float:none; text-align:center; line-height:44px;}
 #buckets ul li{ margin-bottom:20px}
 #buckets ul li:last-child{ margin:0}
 
+ul#social-links li{ padding:0 15px; margin-bottom:20px; float:none; left:auto; display:inline-block}
+ul#social-links li.youtube{ border:none}
+ul#social-links li.phone{ display:block; float:none; border:none; margin-bottom:0; }
+
 
 /* GRID
 ------------------------------ */
@@ -125,13 +129,9 @@ header .inner{ padding-right:60px}
 /* GRID
 ------------------------------ */
 
-.grid{ float:none}
-.grid.third,
-.grid.quarter{ width:auto;}
+.grid.third{ width:auto; float:none}
 .grid.third:nth-child(even) .inner,
-.grid.third:nth-child(odd) .inner,
-.grid.quarter:nth-child(even) .inner,
-.grid.quarter:nth-child(odd) .inner{padding:0}
+.grid.third:nth-child(odd) .inner{padding:0}
 
 
 /* ELEMENTS
@@ -162,6 +162,10 @@ h3{ font-size:1.6em; }
 .view-home-slideshow,
 .node-project .images{ margin-left:-20px; margin-right:-20px}
 
+.fb_iframe_widget,
+.fb-like-box > span,
+.fb-like-box iframe{ width:440px!important; max-width:440px !important;}
+
 
 /* VIEWS
 ------------------------------ */
@@ -178,3 +182,11 @@ h3{ font-size:1.6em; }
 
 }  
 
+
+@media (max-width: 320px) {
+	
+.fb_iframe_widget,
+.fb-like-box > span,
+.fb-like-box iframe{ width:280px!important; max-width:280px !important;}
+	
+}

@@ -27,10 +27,17 @@ foreach( $vids as $vid){
 
 ?>
 
-<div id="buckets">
+<div id="buckets" class="view">
 	<div class="wrap padding">
-    	<div class="inner">
-        
+    	<div class="inner views-row">
+        	<?php
+			  global $user;
+			  if (in_array('FlowForm Admin', array_values($user->roles)) || in_array('administrator', array_values($user->roles))):
+			  ?>
+				<div class="views-field views-field-edit-node">
+                	<span class="field-content"><a href="/node/21/edit">edit</a></span>
+                </div>	
+			 <?php endif ;?>
         	<ul class="nostyle layout-grid clearfix">
             	<li class="grid third">
                 	<div class="inner">

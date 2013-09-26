@@ -1,5 +1,4 @@
 
-
 /* ------------------------------ */
 /* MAIN LAYOUT 
 /* ------------------------------ */
@@ -258,7 +257,7 @@ html .media-vimeo-preview-wrapper object, html .media-vimeo-preview-wrapper ifra
 .node-product .field-name-field-image img{ margin:0 auto}
 .footnote{ border-top:2px solid #666; padding-top:20px; }
 .footnote p{ margin-bottom:0}
-#request-dwg{ border-bottom:2px solid #404040; line-height:1; padding:8px 0}
+#request-dwg{ border-bottom:2px solid #404040; line-height:1; padding:8px 0; max-width:350px; margin:0 auto}
 
 /* PROJECT */
 .node-project h2{ border:none; margin:-20px 0 20px; padding:0}
@@ -331,7 +330,7 @@ table.draggable { color:#000; font-size:1.5em}
 .facebook-feed .inner{ padding-right:20px}
 .fb_iframe_widget,
 .fb-like-box > span,
-.fb-like-box iframe{ width:100%!important; background:#fff }
+.fb-like-box iframe{ width:100%!important; max-width:100% !important; background:#fff }
 
 
 
