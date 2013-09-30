@@ -11,6 +11,10 @@ Drupal.behaviors.my_custom_behavior = {
 		return false; 
 	});
 	
+	$('nav ul.menu li.menu-mlid-524 > a').click( function(){
+		return false;
+	});
+	
     // Rewrite block titles
 	$('.feed h2').each( function(){
 		title = $(this).html().split(' ');

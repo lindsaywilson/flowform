@@ -23,13 +23,25 @@ header .inner{ background:url(../images/bg_curve.gif) 306px 0 no-repeat }
 #menu-toggle a{ display:block; width:25px; height:21px; background:url(../images/mobile_menu.png); text-indent:-999em; outline:none }
 #menu-toggle a.close{ background-position:0 -50px}
 
+header .region-nav .inner{ background:none}
 nav{ position:absolute; right:0; top:40px; outline:none}
-nav ul{ margin:0; padding:0; font-size:2em; }
-nav ul li{ float:left; font-family:arial; text-transform:uppercase; line-height:47px; border-right:2px solid #404040; padding:0}
-nav ul li:last-child{ border:none}
-nav ul li a{ color:#fff; display:block; padding:0 22px; text-decoration:none }
-nav ul li a:hover{ color:#a6ce39; }
-nav ul li a.active-trail{ font-family:'archivo'; color:#a6ce39}
+nav ul.menu{ margin:0; padding:0; font-size:2em; }
+nav ul.menu li{ float:left; font-family:arial; text-transform:uppercase; line-height:47px; border-right:2px solid #404040; padding:0; position:relative}
+nav ul.menu li:last-child{ border:none}
+nav ul.menu li a{ color:#fff; display:block; padding:0 22px; text-decoration:none }
+nav ul.menu li a:hover{ color:#a6ce39; }
+nav ul.menu li a.active-trail{ font-family:'archivo'; color:#a6ce39}
+nav ul.menu li:hover,
+nav ul.menu li a:hover{ background:#5c5c5c}
+nav ul.menu li:hover ul{ display:block}
+nav ul.menu li.menu-mlid-524 > a{ cursor:text}
+
+nav ul.menu ul{ position:absolute; top:100%; left:-2px; margin:0; padding:0 22px; width:auto; z-index:99; background:#333333; border-left:2px solid #404040; font-size:.75em; display:none }
+nav ul.menu ul li{ float:none; display:block; width:auto; border:none; border-bottom:1px solid #484848}
+nav ul.menu ul li a,
+nav ul.menu ul li a.active-trail{ white-space:nowrap; font-family:arial; padding:0}
+nav ul.menu ul li:hover,
+nav ul.menu ul li a:hover{ background:none}
 
 
 /* ------------------------------ */

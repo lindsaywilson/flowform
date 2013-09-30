@@ -86,6 +86,7 @@ scripts[] = js/script.js
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
+regions[nav]            = Nav
 regions[help]           = Help
 regions[content]        = Content
 regions[bottom]         = Page bottom

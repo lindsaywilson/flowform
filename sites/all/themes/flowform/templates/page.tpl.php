@@ -21,17 +21,7 @@
        	  </div>
           
                 <nav id="main-menu" role="navigation" tabindex="-1">
-                  <?php
-                  // This code snippet is hard to modify. We recommend turning off the
-                  // "Main menu" on your sub-theme's settings form, deleting this PHP
-                  // code block, and, instead, using the "Menu block" module.
-                  // @see https://drupal.org/project/menu_block
-                  print theme('links__system_main_menu', array(
-                    'links' => $main_menu,
-                    'attributes' => array(
-                      'class' => array('clearfix'),
-                    ),
-                  )); ?>
+                  <?php print render($page['nav']); ?>
                 </nav>
           
           

@@ -39,6 +39,9 @@
     <script src="<?php print $base_path . $path_to_zen; ?>/js/respond.js"></script>
     <![endif]-->
   <?php endif; ?>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="/<?php print path_to_theme(); ?>/js/selectivizr-min.js"></script>
+  <![endif]--> 
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 <?php if($is_front): ?>

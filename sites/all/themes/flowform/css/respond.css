@@ -5,8 +5,9 @@
 
 @media (max-width: 960px) {
 
-nav ul{ font-size:1.65em}
-nav ul li a{ padding:0 10px}
+nav ul.menu{ font-size:1.65em}
+nav ul.menu li a{ padding:0 10px}
+nav ul.menu ul{ padding:0 10px}
 
 }
 
@@ -29,7 +30,12 @@ nav ul li a{ padding:0 10px}
 header .inner{ background:#fff; position:relative;}
 #menu-toggle{  display:block }
 nav{ position:relative; top:0; display:none}
-nav ul li{ display:block; float:none; text-align:center; line-height:44px;}
+nav ul.menu li{ display:block; float:none; text-align:center; line-height:44px;}
+nav ul.menu li{ border:none}
+nav ul.menu li:hover,
+nav ul.menu li a:hover{ background:none}
+nav ul.menu ul{ display:block; position:relative; background:none; left:0; top:0; border:none}
+nav ul.menu ul li{ border:none}
 
 
 /* FOOTER
@@ -93,6 +99,10 @@ h5{ font-size:1.2em; }
 /* PROJECT */
 .view-home-slideshow,
 .node-project .images{ margin-left:-50px; margin-right:-50px}
+
+/* DWG REQUEST */
+.webform-client-form #webform-component-products{ position:relative; top:0; left:0; width:auto; margin-bottom:40px}
+.webform-client-form #webform-component-products .form-type-checkbox label span{ display:inline; margin:0 0 0 20px}
 
 
 /* VIEWS
