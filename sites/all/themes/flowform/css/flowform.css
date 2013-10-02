@@ -178,6 +178,7 @@ label, input, textarea, select{ font-size:1.5em}
 div.messages{ font-size:1.5em}
 div.messages p,
 div.messages ul{ font-size:1em; margin:0}
+.ok a, .messages--status a{ color:#234600}
 /*.contextual-links-region{ position:static}*/
 
 
@@ -287,10 +288,11 @@ html .media-vimeo-preview-wrapper object, html .media-vimeo-preview-wrapper ifra
 
 /* DWG FORM */
 .node-27{ position:relative}
-.webform-client-form #webform-component-products{ position:absolute; left:0; top:0; padding:0; margin:0; width:30%}
+.webform-client-form #webform-component-products{ position:absolute; left:0; top:0; padding:0; margin:0; width:35%}
 .webform-client-form #webform-component-products > label{ font-weight:bold; color:#a6ce39; text-transform:uppercase; width:auto; margin-bottom:20px; line-height:1.2}
+.webform-client-form #edit-submitted-products .form-item.form-type-checkbox{ margin-bottom:0}
 .webform-client-form #webform-component-products  .form-type-checkbox label{ margin-left:20px; text-transform:uppercase; line-height:1}
-.webform-client-form #webform-component-products  .form-type-checkbox label span {color:#929191; font-size:.8em; display:block; margin-left:38px; font-weight:bold}
+.webform-client-form #webform-component-products  .form-type-checkbox label span {color:#929191; font-size:.8em; display:inline; margin-left:5px; font-weight:bold}
 
 
 /* ------------------------------ */
