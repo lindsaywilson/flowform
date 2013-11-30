@@ -75,7 +75,7 @@
   
   <div id="footnote">
   	<div class="wrap">
-    	&copy; <?php print date('Y'); ?> <span class="archivo">FLOW</span>FORM BIKE RAMPS, 8-1050 Millar Creek Road, Whistler, BC, V0N 1B1, CANADA
+    	&copy; <?php print date('Y'); ?> <span class="archivo">FLOW</span>FORM BIKE RAMPS, Whistler, BC, CANADA
     </div>
   </div>
 
